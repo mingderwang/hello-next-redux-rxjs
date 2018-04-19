@@ -1,16 +1,20 @@
-import { connect } from 'react-redux';
-import PageWrapper from './pageWrapper'
+import Container from './containers/Page'
+import state from './initialState'
+import pageReducer from './reducer'
+import * as pageActions from './actions'
 
-const page = (props) => {
-    console.log(props)
-    return(
-        <div>
-            <div>
-                <h1>Home Page</h1>
-            </div>
-            <style jsx>{`
-            `}</style>
-        </div>
-    )
-}
-export default PageWrapper(connect(state=>state)(page));
+export const Page = Container
+export const initialState = state
+export const reducer = pageReducer
+export const actions = pageActions
+/*
+import * as counterActions from './actions'
+import counterReducer from './reducer'
+import Container from './containers/Counter'
+import state from './initialState'
+
+export const actions = counterActions
+export const reducer = counterReducer
+export const Counter = Container
+export const initialState = state
+*/

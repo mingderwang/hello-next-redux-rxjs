@@ -3,19 +3,8 @@ import { createStore, applyMiddleware } from 'redux'
 import { createEpicMiddleware } from 'redux-observable'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import epics from './epics'
-import StateLoader from "~/shared/stateLoader"
-/*
-import StateLoader from "~/shared/stateLoader"
-import { createStore } from 'redux'
+import StateLoader from "./stateLoader"
 
-const stateLoader = new StateLoader();
-
-let store = createStore(appReducers, stateLoader.loadState());
-
-store.subscribe(() => {
-    stateLoader.saveState(store.getState());
-});
-*/
 let store = null
 
 export default (reducer, initialState = {}) => {

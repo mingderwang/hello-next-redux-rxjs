@@ -1,5 +1,10 @@
-import React from 'react'
-import Page from '~/page' //.babelrc get page under modules/
+import { Page } from '~/page'
+import { Provider } from 'react-redux'
+import { getStore } from '~/redux-config'
 
 export default () =>
-  <Page/>
+  <Provider store={getStore()}>
+    <div>
+      <Page/>
+    </div>
+  </Provider>

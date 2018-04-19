@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-//import { reducer as counter } from '~/counter'
+import { reducer as page } from '~/page'
 
 export default combineReducers({
-  //fetch,
+  page,
 })
