@@ -16,6 +16,9 @@ export default (reducer, initialState = {}) => {
     store.subscribe(() => {
         stateLoader.saveState(store.getState());
     })
+  } else {
+    console.log('store:')
+    console.log(store)
   }
   return store
 }
