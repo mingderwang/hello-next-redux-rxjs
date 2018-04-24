@@ -1,14 +1,11 @@
-import { Page } from '~/page'
-import { Page2 } from '~/page2'
-import { Page3 } from '~/page3'
-import { Provider } from 'react-redux'
-import { getStore } from '~/redux-config'
-
-export default () =>
-  <Provider store={getStore()}>
+export default function IndexPage() {
+  return (
     <div>
-      <Page/>
-      <Page2/>
-      <Page3/>
+      <h1>Homepage</h1>
+      <form method="GET" action="/greeting">
+        Name: <input name="name" />
+        <input type="submit" />
+      </form>
     </div>
-  </Provider>
+  );
+}
