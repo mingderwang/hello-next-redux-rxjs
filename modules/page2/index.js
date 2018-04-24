@@ -3,7 +3,7 @@ import state from './initialState'
 import pageReducer from './reducer'
 import * as pageActions from './actions'
 
-export const Page = Container
+export const Page2 = Container
 export const initialState = state
 export const reducer = pageReducer
 export const actions = pageActions

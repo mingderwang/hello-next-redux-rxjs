@@ -1,10 +1,9 @@
-'use strict'
-
+import initialState from './initialState'
 export default class StateLoader {
 
     loadState() {
         try {
-            let serializedState = localStorage.getItem("http://b44.vrecle.com:state");
+            let serializedState = localStorage.getItem("http://hello-next-redux-rxjs-b44.vrecle.com:state");
 
             if (serializedState === null) {
                 return this.initializeState();
@@ -20,7 +19,7 @@ export default class StateLoader {
     saveState(state) {
         try {
             let serializedState = JSON.stringify(state);
-            localStorage.setItem("http://b44.vrecle.com:state", serializedState);
+            localStorage.setItem("http://hello-next-redux-rxjs-b44.vrecle.com:state", serializedState);
 
         }
         catch (err) {
@@ -28,8 +27,6 @@ export default class StateLoader {
     }
 
     initializeState() {
-        return {
-              //state object
-            }
+        return initialState
     }
   }

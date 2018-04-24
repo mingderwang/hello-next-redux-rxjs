@@ -1,5 +1,11 @@
-import React from 'react'
-import Page from '~/page' //.babelrc get page under modules/
-
-export default () =>
-  <Page/>
+export default function IndexPage() {
+  return (
+    <div>
+      <h1>Homepage</h1>
+      <form method="GET" action="/greeting">
+        Name: <input name="name" />
+        <input type="submit" />
+      </form>
+    </div>
+  );
+}
