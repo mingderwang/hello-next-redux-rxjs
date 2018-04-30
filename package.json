@@ -1,11 +1,13 @@
 {
-  "name": "hello-next-redux-rxjs",
-  "version": "0.0.1",
+  "name": "bimap2",
+  "version": "0.10.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "start": "next",
+    "flow": "flow",
+    "start": "next start",
+    "build": "next build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,7 +16,7 @@
   "dependencies": {
     "babel-plugin-root-import": "^5.1.0",
     "grommet": "^1.10.1",
-    "next": "^5.1.0",
+    "next": "^6.0.0",
     "next-url-prettifier": "^1.2.0",
     "react": "latest",
     "react-dom": "latest",
